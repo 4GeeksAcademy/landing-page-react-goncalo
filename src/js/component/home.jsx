@@ -1,26 +1,46 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Navbar from "./Navbar";
+import Jumbotron from "./Jumbotron";
+import Card from "./Card";
+import Footer from "./Footer";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  return (
+    <div>
+      <Navbar title="Start Bootstrap" />
+      <div style={{ width: "70%", margin: "auto" }}>
+        <Jumbotron />
+        <div className="d-flex">
+          <Card
+            image="https://storage.needpix.com/rsynced_images/gray-box-background.jpg"
+            title="Card title"
+			description="Some quick example text to build on the card title and make up the bulk of the card's content."
+			button="Find out more!"
+          />
+          <Card
+            image="https://storage.needpix.com/rsynced_images/gray-box-background.jpg"
+            title="Card title"
+			description="Some quick example text to build on the card title and make up the bulk of the card's content."
+			button="Find out more!"
+          />
+          <Card
+            image="https://storage.needpix.com/rsynced_images/gray-box-background.jpg"
+            title="Card title"
+			description="Some quick example text to build on the card title and make up the bulk of the card's content."
+			button="Find out more!"
+          />
+          <Card
+            image="https://storage.needpix.com/rsynced_images/gray-box-background.jpg"
+            title="Card title"
+			description="Some quick example text to build on the card title and make up the bulk of the card's content."
+			button="Find out more!"
+          />
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;
